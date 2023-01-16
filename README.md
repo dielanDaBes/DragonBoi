@@ -3,6 +3,10 @@ D&amp;D figurine light stand
 
 Enjoy Justin!
 
+<p align="center">
+  <img src="Drago.jpg">
+</p>
+
 
 https://www.tinkercad.com/things/7relOf7Lwub
 
