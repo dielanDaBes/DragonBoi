@@ -1,12 +1,13 @@
-int red = 255;
+//#define DEBUG
+int red = 100;
 int redPin = 9;
-int blue = 255;
+int blue = 100;
 int bluePin = 10;
 int green = 255;
 int greenPin = 11;
 int mode = 0;
 int modePin = 8;
-int setModes[7][3] = { { 255, 0, 0 }, { 0, 255, 0 }, { 0, 0, 255 }, { 255, 70, 0 }, { 255, 30, 0 }, { 255, 0, 50 }, { 255, 255, 255 } };
+int setModes[7][3] = { { 255, 0, 0 }/*Red*/, { 0, 255, 0 }/*Blue*/, { 0, 0, 255 }/*Green*/, { 255, 70, 0 }/*Purple*/, { 150, 10, 200 }/*Gold*/, { 255, 0, 80 }/*Copper*/, { 100, 100, 255 }/*White*/ };
 int buttonState;
 int lastButtonState = HIGH;
 unsigned long lastDebounceTime = 0;
@@ -89,15 +90,16 @@ void loop() {
   // save the reading. Next time through the loop, it'll be the lastButtonState:
   lastButtonState = sensorVal;
 
+#ifdef DEBUG
+  //Manually enter RGB values into serial monitor separated by commas to test new colors (Ex for white: 255,255,255)
+   String colorArray = Serial.readStringUntil('\n');
+   if (colorArray.length()<1)
+   {                // bail if we got an empty line
+     return;
+   }
 
-  // //Debug
-  // String colorArray = Serial.readStringUntil('\n');
-  // if (colorArray.length()<1)
-  // {                // bail if we got an empty line
-  //   return;
-  // }
-
-  // red = getValue(colorArray, ',', 0).toInt();
-  // blue = getValue(colorArray, ',', 1).toInt();
-  // green = getValue(colorArray, ',', 2).toInt();
+   red = getValue(colorArray, ',', 0).toInt();
+   green = getValue(colorArray, ',', 1).toInt();
+   blue = getValue(colorArray, ',', 2).toInt();
+  #endif
 }
