@@ -8,7 +8,7 @@ Enjoy Justin!
 </p>
 
 
-<a href="https://www.tinkercad.com/things/7relOf7Lwub">3D Files</a> (Note: Need to chamfer edges around battery hatch to prevent binding and should reduce button hole size)
+<a href="https://www.tinkercad.com/things/7relOf7Lwub">3D Files</a> (Note: Need to chamfer edges around battery hatch to prevent binding and should reduce button outer hole size, slightly expand head pin inner hole size, and remove hinge shelves)
 
 <a href="https://www.sparkfun.com/products/13342">Lilypad Arduino</a>
 
