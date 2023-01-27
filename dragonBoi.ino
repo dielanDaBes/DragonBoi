@@ -7,7 +7,7 @@ int green = 255;
 int greenPin = 11;
 int mode = 0;
 int modePin = 8;
-int setModes[7][3] = { { 255, 0, 0 }/*Red*/, { 0, 255, 0 }/*Blue*/, { 0, 0, 255 }/*Green*/, { 255, 70, 0 }/*Purple*/, { 150, 10, 200 }/*Gold*/, { 255, 0, 80 }/*Copper*/, { 100, 100, 255 }/*White*/ };
+int setModes[7][3] = { { 255, 0, 0 }/*Red*/, { 0, 255, 0 }/*Green*/, { 0, 0, 255 }/*Blue*/, { 255, 70, 0 }/*Purple*/, { 150, 10, 200 }/*Gold*/, { 255, 0, 80 }/*Copper*/, { 100, 100, 255 }/*White*/ };
 int buttonState;
 int lastButtonState = HIGH;
 unsigned long lastDebounceTime = 0;
